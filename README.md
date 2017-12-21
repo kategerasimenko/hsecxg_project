@@ -305,6 +305,79 @@
 ![tree](https://raw.githubusercontent.com/kategerasimenko/hsecxg_project/master/tree.png "Tree")
 только три пути справа ведут к герундию, остальные к инфинитиву.
 
+## Анализ результатов статистического анализа - логистическая регрессия
+Рассмотрим слова и долю инфинитива в наиболее значимых категориях в модели м20+в10: <br>
+m: 2 11 15 17 19 <br>
+e: 1 2 3 6 7 <br>
+
+
+**m2**
+```
+['failing', 'wanted', 'seeking', 'requiring', 'compelled', 'threatening', 'voted', 'motivated', 'forced', 'intend', 'decided', 'want', 'instructed', 'threatened', 'prefer', 'proposing', 'need', 'plans', 'destined', 'promised', 'pledged', 'Seeking', 'ordered', 'planning', 'allowed', 'contemplating', 'planned', 'pressured', 'chose', 'scheduled', 'tended', 'intending', 'expected', 'prepared', 'wanting', 'wishing', 'wished', 'intended', 'expecting', 'required', 'Want', 'advised', 'refusing', 'Refusing', 'invited', 'meant', 'tend', 'persuaded', 'needed', 'expect', 'needing', 'going', 'urged', 'agreed', 'encouraged', 'permitted', 'deciding', 'refuse', 'Intending', 'requested', 'preferring', 'tempted', 'preparing', 'wishes', 'opted', 'looking', 'refused', 'pressed', 'bound', 'pressing', 'asked', 'demanded']
+```
+примерно волеизъявление, доля инфинитива 0.98
+
+**m11**
+```
+['avoids', 'resolves', 'decides', 'refuses', 'makes', 'desires', 'rearranges', 'helps', 'proposes', 'manages', 'purports', 'wants', 'goes', 'uses', 'works', 'determines', 'pretends', 'strives', 'serves', 'asks', 'continues', 'learns', 'seeks', 'lets', 'intends', 'transforms', 'undertakes', 'chooses', 'survives', 'tends', 'fails', 'knows', 'brings', 'recommends', 'considers', 'exists', 'aspires', 'prefers', 'likes', 'takes', 'needs', 'enjoys', 'allows', 'comes', 'finds', 'happens', 'understands']
+```
+глаголы 3sg, доля инфинитива 0.95
+
+**m15**
+```
+['appears', 'dreaded', 'gimmicks', 'means', 'bait', 'convoluted', 'forbearing', 'seems', 'seemed', 'barbel', 'dread', 'bent', 'reappears', 'whispers', 'seeming', 'longing', 'returns', 'dull', 'acts', 'minded', 'WOAD', 'contrive', 'proves', 'turns', 'contrives', 'daring', 'promises', 'leaves', 'moves', 'blows', 'implies', 'seem', 'reverses', 'reassuring']
+```
+семантически разношерстно, но инфинитив - 0.95
+
+**m17**
+```
+['Struggling', 'try', 'struggling', 'attempting', 'struggled', 'hopes', 'hoped', 'sought', 'AIMING', 'attempted', 'hoping', 'conspired', 'helped', 'Hoping', 'endeavored', 'striven', 'attempt', 'strive', 'failed', 'tries', 'tried', 'Aim', 'managed', 'aiming', 'attempts', 'trying', 'aim', 'hope', 'striving', 'aims', 'struggle', 'helping', 'strove', 'Try']
+```
+стремление, инфинитив - 0.98
+
+**m19**
+```
+['restrict', 'quit', 'forbidden', 'stop', 'avoid', 'prohibit', 'justify', 'comply', 'Stop', 'destroy', 'reduce', 'prevent', 'Consent', 'remedy', 'resist', 'postpone', 'notice', 'obey', 'resolve', 'deny', 'warrant', 'justified']
+```
+волеизъявление, прекращение... больше герундий, но есть и инфинитив (доля 0.19)
+
+
+
+**e1**
+```
+['profess', 'talk', 'admire', 'urge', 'implore', 'guess', 'consider', 'want', 'hate', 'appreciate', 'disappoint', 'complain', 'blame', 'refrain', 'like', 'prefer', 'enjoy', 'ask', 'swear', 'shew', 'miss', 'congratulate', 'read', 'insist', 'tell', 'pray', 'invite', 'criticize', 'believe', 'remember', 'wait', 'worry', 'wonder', 'mean', 'doubt', 'remind', 'praise', 'sacrifice', 'suggest', 'think', 'crave', 'hear', 'imagine', 'begrudge', 'do', 'acknowledge', 'quarrel', 'strive', 'excuse', 'feel', 'realize', 'proclaim', 'perceive', 'beg', 'love', 'say', 'forget', 'recommend', 'await', 'admit', 'know', 'choose', 'condone', 'expect', 'rely', 'owe', 'beware', 'disagree', 'contend', 'unstinting', 'warn', 'reckon', 'resent', 'argue', 'assure', 'oppose', 'astound', 'refuse', 'foresee', 'disapprove', 'ignore', 'preach', 'despise', 'watch', 'listen', 'thank', 'seem', 'mention', 'fail', 'deny', 'fear', 'regret', 'see', 'look', 'contemplate', 'wish', 'please', 'agree', 'let', 'endure', 'decide', 'overlook', 'undeserving']
+```
+чувства, мысли, доля инфинитива 0.88
+
+**e2**
+```
+['favour', 'staff', 'result', 'practise', 'sponsor', 'award', 'offer', 'review', 'visit', 'vet', 'function', 'accord', 'reward', 'her', 'transplant', 'copy', 'near', 'sum', 're-sign', 'chair', 'answer', 'assist', 'nacab', 'challenge', 'murder', "forgettin'", 'interview', 'act', 'range', 'judge', 'power', 'lodge', 'appear', 'survey', 'farm', 'co-operate', 'test', 'value', 'institute', 'beneficially', 'concern', 'lysine', 'adequately', 'trade', 'bus', 'question', 'outcross', 'crop', 'market', 'number', 'matter', ';', 'last', 'railcoach', 'major', 'alternate', 'need', 'yield', 'mistrust', 'gross', 'land', 'place', 'separate', 'limit', 'minimise', 'school', 'estimate', 'licence', 'report', 'count', 'study', 'claim', 'close', 'barrack', 'sign', 'display', 'share', 'risk', 'tender', 'charge', "'ave", 'store', 'mind', 'state', 'reference', 'comfort', 'associate', 'tour', 'escort', 'treasure', 'be', 'care', 'subtly', 'interest', 'exercise', 'fundamentally', 'house', 'advocate', 'diet', 'attempt', 'request', 'plan', 'train', 'over-provide', 'sketch', 'order', 'machine', 'focus', 'guarantee', 're-assessing', 'force', 'encourage/reinforce', 'increase', 'work', 'appeal', 'promise', 'substitute', 'release', 'lecture', 'account', 'stock', 'age', 'step', 'legering', 'police', 'resort', 'suspect', 'bridge', 'free', 'flow', 'deal', 'budget', 'transfer', 'fulfil', 'benefit', 'note', 'sound', 'sort', 'quote', 'obscure', 'import', 'abuse', 'regard', 'aid', 'long', 'stress', 'call', 'criticise', 'show', 'suit', 'bear', 'grade', 'control', 'piece', 'part', 'name', 'support', 'breed', 'approach', 'barlaston', '’', 'discipline', 'light', 'contact', 'ferry', 'board', 'press', 'fee', 'link', 'influence', 'experiment', 'specialise', '.', 'notice', 'service', 'shop', 'direct', 'galvanise', 'master', 'object', 'subsidise', 'conflict', 'cost', 'view', 'draft', 'progress', 'lasing', 'price', 'travel', 'requite', 'date', 'balance', 'clear', 'rule', 'record', 'telephone', 'recognise', 'supply', 'exchange', 'modernise', 'open', 'worship', 'gain', 'deposit', 'aim', 'ensure', 'present', 'organise', 'entirely', 'sample', '‘', 'favourably', 'wastepaper', 'capitalise', 'base', 'signal', 'target', 'emphasise', 'list', 'complete', 'live', 'delegate', 'foxhunt', 'change', 'properly', 'advance', 're-enter', 'materialise', 'experience', 'very', 'trust', 'update', 'set', 'utilise', 'breach', "again'", 'reserve', 'appropriate', 'queue', 'demand', 'co-opt', 'figure', ',', 'lower', 'broadcast', 'permit', 'track', 'check', 'jeopardise', 'flood', 'publicise', 'form', 'campaign', 'issue', 'end', 'reason', 'reform', 'project', 'decline', 'search', 'have', 'realise', 'quarry', 'milk', 'either']
+```
+мусорный класс, в который попали ошибки аннотации - видимо, означают "инфинитив" (после to) - 0.92
+
+**e3**
+```
+['mystify', 'thrive', 'coincide', 'imbue', 'circulate', 'sway', 'denote', 'capitalize', 'boost', 'enable', 'rejuvenate', 'incite', 'mislead', 'rediscover', 'induce', 'repress', 'forge', 'emulate', 'commemorate', 'create', 'encourage', 'celebrate', 'reorient', 'unify', 'translate', 'facilitate', 'accelerate', 'attract', 'blend', 'emphasize', 'reflect', 'incorporate', 'stimulate', 'instil', 'reinforce', 'vitalize', 'improve', 'nurture', 'impress', 'promote', 'combine', 'brighten', 'bring', 'penetrate', 'civilize', 'evoke', 'express', 'strengthen', 'resonate', 'accentuate', 'revitalize', 'represent', 'conceive', 'invent', 'provoke', 'seduce', 'foster', 'trivialize', 'uplift', 'embody', 'popularize', 'recast', 'elicit', 'duplicate', 'capture', 'divide', 'emerge', 'prosper', 'achieve', 'elevate', 'transmute', 'encapsulate', 'inspire', 'proselytize', 'engender', 'reinvigorate', 'exploit', 'entertain', 'humiliate', 'highlight', 'generate', 'enhance']
+```
+разношерстный класс глаголов, инфинитив 0.93
+
+**e6**
+```
+['guide', 'predict', 'advise', 'inquire', 'describe', 'adapt', 'examine', 'manage', 'acquaint', 'detect', 'refer', 'quantify', 'identify', 'react', 'educate', 'gauge', 'assign', 'compare', 'retell', 'delineate', 'discover', 'explore', 'inspect', 'communicate', 'address', 'coordinate', 'reconstruct', 'confirm', 'scrutinize', 'illustrate', 'monitor', 'interrogate', 'connect', 'treat', 'prove', 'teach', 'demonstrate', 'devise', 'relate', 'respond', 'explain', 'recognize', 'understand', 'evaluate', 'prepare', 'formulate', 'diagnose', 'regulate', 'compile', 'determine', 'establish', 'classify', 'clarify', 'calculate', 'investigate', 'discuss', 'distinguish', 'interpret', 'uncover', 'gather', 'find', 'assess', 'certify', 'reveal', 'observe', 'scan', 'select', 'navigate', 'locate', 'trace', 'learn', 'correspond', 'tailor', 'consult', 'grapple', 'summarize', 'grasp', 'assert', 'speak', 'disseminate', 'define']
+```
+еще глаголы, доля инфинитива 0.94
+
+**e7**
+```
+['extract', 'extinguish', 'remove', 'reconcile', 'stop', 'eradicate', 'lessen', 'placate', 'soothe', 'avoid', 'save', 'alleviate', 'suppress', 'wean', 'justify', 'repopulate', 'steer', 'straighten', 'combat', 'exert', 'eliminate', 'forestall', 'wrest', 'erase', 'protect', 'tackle', 'overcome', 'cope', 'counteract', 'blackmail', 'pacify', 'reduce', 'prevent', 'calm', 'regroup', 'expunge', 'disperse', 'reverse', 'prolong', 'heal', 'compensate', 'preserve', 'restore', 'conserve', 'escape', 'resist', 'subdue', 'exonerate', 'curb', 'persuade', 'appease', 'safeguard', 'defuse', 'keep', 'resolve', 'fix', 'rid', 'mediate', 'convince', 'cure', 'contain', 'counter', 'restrain', 'ameliorate', 'mitigate', 'quell', 'relieve', 'survive', 'banish', 'stem', 'recover', 'ease', 'recapture', 'shield', 'reassure', 'solve', 'hide', 'offset', 'soften', 'satisfy']
+```
+и еще глаголы, инфинитивов 0.98.
+
+Таким образом:
+* модель (логистическая регрессия) выделила наиболее "инфинитивные" кластеры в обоих глаголах
+* только в матричном глаголе оказался "герундивный" кластер, во вложенном глаголе таких кластеров нет ни в в10, ни в в20
+
+
 ## Обсуждение использованных квантитативных методов
 Я выгрузила предсказания логистической регрессии и дерева (вероятности), подобрала порог вероятности, с которого стоит считать ответ единицей (инфинитивом) и посмотрела, каковы результаты. [Код](https://github.com/kategerasimenko/hsecxg_project/blob/master/Prediction%20report.ipynb)
 * метрика - f1_score, причем оценивается по классу 0 (герундий, находится в очевидном меньшинстве)
