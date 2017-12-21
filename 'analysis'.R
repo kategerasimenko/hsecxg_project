@@ -1,6 +1,6 @@
 library(party)
 
-data <- read.csv(file="D:/Катя/Учеба/деплом/конструкции/data_plus_clust.csv", header=TRUE, sep=";")
+data <- read.csv(file="D:/data_plus_clust.csv", header=TRUE, sep=";")
 data <- data[,c('control.','answer','matrix_clust10_class','matrix_clust20_class',
                  'embedded_clust10_class','embedded_clust20_class')]
 colnames(data) <- c('c','answer','m10','m20','e10','e20')
@@ -19,4 +19,4 @@ plot(t)
 tree_pred = predict(t,type='response')
 
 dd = data.frame(logit_pred,tree_pred,data[,'answer'])
-write.csv(dd,'D:/Катя/Учеба/деплом/конструкции/predictions.csv')
+write.csv(dd,'D:/predictions.csv')
